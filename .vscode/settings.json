@@ -1,0 +1,50 @@
+{
+  /* Editor Settings */
+  "editor.fontFamily": "Source Code Pro, 'sans-serif'",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "on",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.autoIndent": "keep",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  /* Bread Crumb Settings */
+  "breadcrumbs.enabled": false,
+  /* Explorer Settings */
+  "explorer.compactFolders": false,
+  /* Files Settings */
+  "files.trimTrailingWhitespace": true,
+  // Hide Certain Files / Folders
+  "files.exclude": {
+    "**/node_modules": false,
+    "**/package-lock.json": true,
+    "**/.git": false,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  /* Terminal Settings */
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.defaultProfile.osx": null,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.fontWeightBold": "normal",
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  /* Workbench Settings */
+  "workbench.editor.showTabs": true,
+  "workbench.statusBar.visible": false,
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "workbench.colorTheme": "United Ubuntu",
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#ffffff"
+  },
+  /* Window Settings */
+  "window.zoomLevel": 2
+}
+

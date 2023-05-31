@@ -1,0 +1,46 @@
+#output {
+  background-color: steelblue;
+  border: 1px solid steelblue;
+  border-radius: 3px;
+  color: #fff;
+  width: 120px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#output:hover {
+  background-color: #fff;
+  color: steelblue;
+}
+
+.btn-node-green {
+  background-color: #68a063;
+  border: 1px solid #68a063;
+  border-radius: 3px;
+  color: #fff;
+  width: 120px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-node-green:hover {
+  background-color: #fff;
+  color: #68a063;
+}
+
+.scraper-container {
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  margin: 0rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
