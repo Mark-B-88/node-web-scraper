@@ -1,4 +1,13 @@
-#output {
+.node-logo {
+  width: 200px !important;
+  height: auto !important;
+}
+
+.input-width {
+  width: 50% !important;
+}
+
+.btn-output {
   background-color: steelblue;
   border: 1px solid steelblue;
   border-radius: 3px;
@@ -9,11 +18,11 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
-}
 
-#output:hover {
-  background-color: #fff;
-  color: steelblue;
+  &:hover {
+    background-color: #fff;
+    color: steelblue;
+  }
 }
 
 .btn-node-green {
@@ -27,11 +36,11 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-in-out;
-}
 
-.btn-node-green:hover {
-  background-color: #fff;
-  color: #68a063;
+  &:hover {
+    background-color: #fff;
+    color: #68a063;
+  }
 }
 
 .scraper-container {
@@ -43,4 +52,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(0, 0, 0, 1) !important;
+  color: #68a063 !important;
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+  .input-width {
+    width: 100% !important;
+  }
 }

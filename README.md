@@ -1,3 +1,9 @@
+# Node Web Scraper With Puppeteer
+
+The original project started as vanilla javascript, but I decided to use React to handle the state changes. The **_output_** route will make a GET request to the back-end `/api/v1/uploads/output.html` to get the scraped data. The back-end will then send the data to the front-end and the front-end will render the data in the browser.
+
+From there you can use the dev console to scrape the page.
+
 # Simple Puppeteer Script to Scrape a Website
 
 ```javascript

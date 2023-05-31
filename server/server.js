@@ -1,16 +1,22 @@
 const express = require("express");
+const cors = require("cors");
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
-const port = 3000;
+const port = 3001;
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "client")));
+app.use(
+  "/api/v1/uploads",
+  express.static(path.join(__dirname, "../client/src/uploads"))
+);
 
 // trigger the scraping
-app.post("/scrape", async (req, res) => {
+app.post("/api/v1/scrape", async (req, res) => {
   const url = req.body.url;
   if (!url) {
     res.status(400).send("URL is required");
@@ -28,21 +34,21 @@ app.post("/scrape", async (req, res) => {
 
     await browser.close();
 
-    fs.writeFile(
-      path.join(__dirname, "public", "output.html"),
-      content,
-      (err) => {
-        if (err) {
-          console.error(err);
-          res
-            .status(500)
-            .send("An error occurred while writing the output file");
-          return;
-        }
+    const outputDir = path.join(__dirname, "../client/src/uploads");
 
-        res.json("Scraping completed successfully");
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    fs.writeFile(path.join(outputDir, "output.html"), content, (err) => {
+      if (err) {
+        console.error(err);
+        res.status(500).send("An error occurred while writing the output file");
+        return;
       }
-    );
+
+      res.json({ status: "success" });
+    });
   } catch (error) {
     console.error(error);
     res.status(500).send("An error occurred during the scraping process");
