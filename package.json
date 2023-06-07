@@ -1,0 +1,28 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "The original project started as vanilla javascript, but I decided to use React to handle the state changes. The **_output_** route will make a GET request to the back-end `/api/v1/uploads/output.html` to get the scraped data. The back-end will then send the data to the front-end and the front-end will render the data in the browser.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mark-B-88/node-web-scraper.git"
+  },
+  "keywords": [
+    "node-js",
+    "puppeteer",
+    "react",
+    "web-scraper"
+  ],
+  "author": "Marco Vinicio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mark-B-88/node-web-scraper/issues"
+  },
+  "homepage": "https://github.com/Mark-B-88/node-web-scraper#readme",
+  "dependencies": {
+    "concurrently": "^8.1.0"
+  }
+}
