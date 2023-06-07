@@ -10,11 +10,17 @@ You can view the markup by going to : `./client/src/uploads/output.html`
 
 `npm run build`
 
+## Create your .env file
+
+`PORT=3001`
+
 ## Run Concurrently
 
 `npm run dev`
 
 # Simple Puppeteer Script to Scrape a Website
+
+<details>
 
 ```javascript
 const puppeteer = require("puppeteer");
@@ -41,3 +47,5 @@ async function run() {
 
 run();
 ```
+
+</details>
