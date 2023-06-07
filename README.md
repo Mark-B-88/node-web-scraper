@@ -6,6 +6,14 @@ The original project started as vanilla javascript, but I decided to use React t
 
 You can view the markup by going to : `./client/src/uploads/output.html`
 
+## Install Dependencies
+
+`npm run build`
+
+## Run Concurrently
+
+`npm run dev`
+
 # Simple Puppeteer Script to Scrape a Website
 
 ```javascript
